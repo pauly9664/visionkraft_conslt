@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionKraft Quote Generator</title>
+</head>
+<body>
+    <img src="logo.png">
+    <h1>Generate a Quote</h1>
+    <form action="/generate-quote" method="POST">
+        <div>
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+        </div>
+        <div>
+            <label for="services">Select Services:</label>
+            <select id="services" name="services" multiple required>
+                <option value='{"name": "Website Design & Development", "cost": 1200}'>Website Design & Dev - $1200</option>
+                <option value='{"name": "Domain Registration", "cost": 20}'>Domain Registration - $20/year </option>
+                <option value="Design">Design</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+        </div>
+        <button type="submit">Generate Quote</button>
+    </form>
+</body>
+</html>
